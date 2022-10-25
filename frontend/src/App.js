@@ -5,7 +5,7 @@ const App = () => {
 
   useEffect(() => {
     (async () => {
-      const result = await fetch("http://localhost:3000");
+      const result = await fetch("http://localhost:5000");
       const veri = await result.json();
       setData(veri);
       console.log("veri =>", veri);
@@ -23,7 +23,7 @@ const App = () => {
         'Content-Type': 'application/json123123123123'
       },
       method : "POST" */
-      axios.post("http://localhost:3000/setdata",{
+      axios.post("http://localhost:5000/setdata",{
         "isim" : "emreeeee"
       })
     };
