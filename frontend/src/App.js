@@ -5,9 +5,8 @@ const App = () => {
 
   useEffect(() => {
     console.log("merhasdadsasdad")
-    axios.get("http://3.87.203.111:5000").then(val => val.json() ).then(data =>{
-      console.log("dataa ==>",data)
-      setData(data)
+    axios.get("http://3.87.203.111:5000").then(val => val ).then(data =>{
+      setData(data.data)
     })
   }, []);
 
@@ -22,7 +21,7 @@ const App = () => {
         'Content-Type': 'application/json123123123123'
       },
       method : "POST" */
-      axios.post("http://3.87.203.111/setdata",{
+      axios.post("http://3.87.203.111:5000/setdata",{
         "isim" : "emreeeee"
       })
     };
