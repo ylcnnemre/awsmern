@@ -4,6 +4,7 @@ const App = () => {
   const [data, setData] = useState();
 
   useEffect(() => {
+    console.log("merhasdadsasdad")
     (async () => {
       const result = await fetch("http://localhost:5000");
       const veri = await result.json();
