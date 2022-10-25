@@ -5,12 +5,10 @@ const App = () => {
 
   useEffect(() => {
     console.log("merhasdadsasdad")
-    (async () => {
-      const result = await fetch("http://localhost:5000");
-      const veri = await result.json();
-      setData(veri);
-      console.log("veri =>", veri);
-    })();
+    axios.get("http://localhost:5000").then(val => val.json() ).then(data =>{
+      console.log("dataa ==>",data)
+      setData(data)
+    })
   }, []);
 
   const sendData = async () => {
